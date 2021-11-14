@@ -22,6 +22,11 @@ export const Navbar: React.FC = () => {
             Концерты
           </Link>
         </li>
+        <li className={styles.NavListItem}>
+          <Link to={`/Favorites`} className={styles.NavListItemLink}>
+            Избранное
+          </Link>
+        </li>
       </ul>
     </nav>
   );
