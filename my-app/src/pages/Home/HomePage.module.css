@@ -1,0 +1,8 @@
+.HomePage {
+  width: 600px;
+  margin: 0 auto;
+}
+.HomePageTitle,
+.HomePageDescription {
+  text-align: center;
+}

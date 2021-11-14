@@ -1,0 +1,21 @@
+.CinemaItemContainer {
+  display: flex;
+  border: 1px solid grey;
+  border-radius: 20px;
+  position: relative;
+}
+.CinemaItemButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: white;
+  border: none;
+}
+
+.CinemaItemButton:hover {
+  color: tomato;
+  cursor: pointer;
+}
+.CinemaItemButton:active {
+  color: black;
+}
