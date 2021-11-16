@@ -17,6 +17,7 @@ export const favoriteReducer = (
       return { favorite: action.payload };
     case FavoriteActionTypes.REMOVE_FAVORITE:
       return { favorite: action.payload };
+    default:
+      return state;
   }
-  return state;
 };
