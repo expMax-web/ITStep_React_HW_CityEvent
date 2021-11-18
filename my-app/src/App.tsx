@@ -10,6 +10,7 @@ import { InfoPage } from "./pages/InfoPage/InfoPage";
 import { FavoritesPage } from "./pages/FavoritesPage/FavoritesPage";
 
 import styles from "./App.module.css";
+import { AddIventForm } from "./component/AddIventForm/AddIventForm";
 
 export const App: React.FC = () => {
   return (
@@ -24,6 +25,7 @@ export const App: React.FC = () => {
         <Route path="/Favorites" component={FavoritesPage} />
         <Redirect from="/" to="/home" />
       </Switch>
+      <AddIventForm />
     </div>
   );
 };
