@@ -17,6 +17,7 @@ interface EventItemProps {
 
 export const EventItem: React.FC<EventItemProps> = ({ info, favoriteItem }) => {
   const { favorite } = useTypeSelector((state) => state.favorite);
+  const { events } = useTypeSelector((state) => state.events);
   return (
     <section className={styles.CinemaItemContainer}>
       <Poster poster={info.poster} big={false} />
@@ -24,7 +25,7 @@ export const EventItem: React.FC<EventItemProps> = ({ info, favoriteItem }) => {
         title={info.title}
         genre={info.genre}
         country={info.country}
-        key={info.id}
+        id={info.id}
         year={info.year}
       />
       <Link to={`/about/${info.type}/${info.id}`} className={styles.ItemLink}>
@@ -43,7 +44,9 @@ export const EventItem: React.FC<EventItemProps> = ({ info, favoriteItem }) => {
         <button
           className={styles.CinemaItemButton}
           onClick={() =>
-            store.dispatch(addItemToFavorites(info.id, info.type, favorite))
+            store.dispatch(
+              addItemToFavorites(info.id, info.type, favorite, events)
+            )
           }
         >
           Добавить в избранное

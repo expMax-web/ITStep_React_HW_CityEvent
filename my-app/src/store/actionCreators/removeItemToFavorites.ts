@@ -7,7 +7,7 @@ export const removeItemIntoFavorites = (
   return {
     type: FavoriteActionTypes.REMOVE_FAVORITE,
     payload: Favorites.filter((item: any) => {
-      return item.id !== Number(id);
+      return item.id !== id;
     }),
   };
 };

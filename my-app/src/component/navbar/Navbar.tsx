@@ -27,6 +27,11 @@ export const Navbar: React.FC = () => {
             Избранное
           </Link>
         </li>
+        <li className={styles.NavListItem}>
+          <Link to={`/addEvent`} className={styles.NavListItemLink}>
+            Добавить событие
+          </Link>
+        </li>
       </ul>
     </nav>
   );

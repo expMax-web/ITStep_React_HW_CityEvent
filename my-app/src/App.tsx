@@ -8,9 +8,9 @@ import { Header } from "./component/header/Header";
 import { HomePage } from "./pages/Home/HomePage";
 import { InfoPage } from "./pages/InfoPage/InfoPage";
 import { FavoritesPage } from "./pages/FavoritesPage/FavoritesPage";
+import { AddEvent } from "./pages/AddEvent/AddEvent";
 
 import styles from "./App.module.css";
-import { AddIventForm } from "./component/AddIventForm/AddIventForm";
 
 export const App: React.FC = () => {
   return (
@@ -23,9 +23,9 @@ export const App: React.FC = () => {
         <Route path="/home" component={HomePage} />
         <Route path="/about/:type/:id" component={InfoPage} />
         <Route path="/Favorites" component={FavoritesPage} />
+        <Route path="/addEvent" component={AddEvent} />
         <Redirect from="/" to="/home" />
       </Switch>
-      <AddIventForm />
     </div>
   );
 };

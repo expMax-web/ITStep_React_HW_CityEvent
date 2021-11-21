@@ -1,25 +1,40 @@
 import React, { InputHTMLAttributes } from "react";
+import classNames from "classnames";
 
 import styles from "./Input.module.scss";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-  placeholder: string | undefined;
-  labelText: string | undefined;
+  labelText?: string;
   error?: string;
+  notFullWidth?: boolean;
 }
 
 export const Input: React.FC<InputProps> = ({
   error,
-  id,
   labelText,
+  id,
+  type,
+  notFullWidth,
   ...inputProps
 }) => {
   return (
-    <div className={styles.InputItem}>
-      <label htmlFor={id} className={styles.LabelInput}>
-        {labelText}:
-      </label>
-      <input className={styles.Input} {...inputProps}></input>
+    <div
+      className={classNames(styles.InputItem, {
+        [styles.InputItem_notFullWidth]: notFullWidth,
+      })}
+    >
+      {labelText && (
+        <label className={styles.LabelInput} htmlFor={id}>
+          {labelText}
+          {type !== "checkbox" && type !== "radio" && <span>:</span>}
+        </label>
+      )}
+      <input
+        className={styles.Input}
+        id={id}
+        type={type}
+        {...inputProps}
+      ></input>
       {error && <span className={styles.Error}>{error}</span>}
     </div>
   );

@@ -7,6 +7,7 @@ interface CinemaItemInfoProps {
   genre: any;
   country?: String;
   year?: Number;
+  id: string;
 }
 
 export const CinemaItemInfo: React.FC<CinemaItemInfoProps> = ({
@@ -14,14 +15,17 @@ export const CinemaItemInfo: React.FC<CinemaItemInfoProps> = ({
   genre,
   country,
   year,
+  id,
 }) => {
   return (
     <div>
       <h1>{title}</h1>
       <p>
         {genre &&
-          genre.map((itemInfo: any) => (
-            <span className={styles.tags}>{itemInfo}</span>
+          genre.map((itemInfo: any, index: number) => (
+            <span className={styles.tags} key={`genre.${index}`}>
+              {itemInfo}
+            </span>
           ))}
         {year && <span className={styles.tags}>{year},</span>}
         {country && <span className={styles.tags}>{country}</span>}

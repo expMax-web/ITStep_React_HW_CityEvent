@@ -2,6 +2,10 @@
   position: relative;
   margin-bottom: 15px;
   width: 100%;
+  overflow: hidden;
+  &_notFullWidth {
+    width: 48%;
+  }
 }
 
 .Input {

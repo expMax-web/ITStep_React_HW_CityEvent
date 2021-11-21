@@ -1,14 +1,15 @@
 import React from "react";
 
 import { EventItem } from "../../component/EventItem/EventItem";
-import { Info } from "../info/constInfo";
+import { useTypeSelector } from "../../hooks/useTypeSelector";
 
 export const CinemaPage: React.FC = () => {
+  const { events } = useTypeSelector((state) => state.events);
   return (
     <div>
       CinemaPage
       <div>
-        {Info.Cinema.map((item: any) => (
+        {events.Cinema.map((item: any) => (
           <EventItem info={item} key={item.id} />
         ))}
       </div>

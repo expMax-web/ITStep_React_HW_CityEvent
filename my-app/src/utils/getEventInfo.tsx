@@ -1,12 +1,10 @@
 import React from "react";
 import { AboutEventItem } from "../component/AboutEventItem/AboutEventItem";
-import { Info } from "../pages/info/constInfo";
 
-export const getEventInfo = (id: string, type: string) => {
+export const getEventInfo = (id: string, type: string, events: any) => {
   if (type === "movie") {
-    const itemInfo: any = Info.Cinema.find(
-      (item: any) => item.id === Number(id)
-    );
+    const itemInfo: any = events.Cinema.find((item: any) => item.id === id);
+
     return (
       <AboutEventItem
         type={type}
@@ -21,8 +19,8 @@ export const getEventInfo = (id: string, type: string) => {
     );
   }
   if (type === "perfomances") {
-    const itemInfo: any = Info.Perfomances.find(
-      (item: any) => item.id === Number(id)
+    const itemInfo: any = events.Perfomances.find(
+      (item: any) => item.id === id
     );
     return (
       <AboutEventItem
@@ -38,9 +36,7 @@ export const getEventInfo = (id: string, type: string) => {
     );
   }
   if (type === "сoncerts") {
-    const itemInfo: any = Info.Concerts.find(
-      (item: any) => item.id === Number(id)
-    );
+    const itemInfo: any = events.Concerts.find((item: any) => item.id === id);
     return (
       <AboutEventItem
         type={type}

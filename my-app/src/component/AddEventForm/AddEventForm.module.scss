@@ -1,0 +1,89 @@
+.AddEventContainerTitle {
+  text-align: center;
+  font-size: 28px;
+}
+.AddEventButtonGroupContainer {
+  width: 350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 20px 0;
+}
+.AddEventButton {
+  font-size: 18px;
+  background-color: inherit;
+  border: none;
+  width: 35%;
+  cursor: pointer;
+}
+.AddEventButton:hover {
+  font-weight: bold;
+}
+.AddEventForm {
+  padding: 20px 40px 20px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 600px;
+  margin: 0 auto;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+.AddEventFormTitle {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.Error {
+  width: 100%;
+  color: rgb(253, 69, 69);
+}
+
+.CheckboxGroupContainer {
+  border: none;
+  width: 100%;
+  padding: 0;
+}
+
+.CheckboxGroupTitle {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.CheckboxGroupItemsContainer {
+  display: flex;
+}
+
+.CheckboxGroupItem {
+  display: inline-flex;
+}
+
+.HiddenGroupInput {
+  display: none;
+}
+
+.PlaceGroupContainer {
+  border: none;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.PlaceInput {
+  font-size: 16px;
+  padding: 5px 10px;
+  display: block;
+  width: 90%;
+  border: none;
+  border-bottom: 1px solid rgb(145, 145, 145);
+  background-color: inherit;
+  &:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px #f4f7fc inset;
+  }
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(0, 0, 0);
+  }
+}
