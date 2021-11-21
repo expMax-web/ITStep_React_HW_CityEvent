@@ -1,0 +1,30 @@
+.CinemaItemContainer {
+  display: flex;
+  border: 1px solid grey;
+  border-radius: 20px;
+  position: relative;
+  padding-bottom: 20px;
+}
+.ItemLink {
+  color: inherit;
+  text-decoration: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+  background-color: rgb(182, 182, 182);
+}
+.CinemaItemButton {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: white;
+  border: none;
+}
+
+.CinemaItemButton:hover {
+  color: tomato;
+  cursor: pointer;
+}
+.CinemaItemButton:active {
+  color: black;
+}

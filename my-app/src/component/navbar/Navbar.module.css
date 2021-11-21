@@ -1,0 +1,16 @@
+.NavList {
+  font-size: 18px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+.NavListItem {
+  padding: 0 40px;
+}
+.NavListItemLink {
+  color: inherit;
+}
+
+.NavListItemLink:hover {
+  color: red;
+}
